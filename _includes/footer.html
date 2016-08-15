@@ -1,0 +1,41 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper" data-grid="center justify">
+      <div class="footer-contact" data-cell>
+        <ul class="contact-list">
+          <li><strong>Matriz</strong></li>
+          <li>Av. Victor Andrews, 3210</li>
+          <li>Éden, Sorocaba</li>
+          <li>Telefone:
+            {% include tel-link.html phone='+551532353848' label='(15) 3235.3848' class='rodape' %}
+          </li>
+        </ul>
+        <ul class="contact-list">
+          <li><strong>Filial</strong></li>
+          <li>Av. Luiz Rink, 504</li>
+          <li>Mutinga, Osasco</li>
+          <li>Telefone:
+            {% include tel-link.html phone='+551126928519' label='(11) 2692.8519' class='rodape' %}
+          </li>
+        </ul>
+      </div>
+
+      <div class="call-to-action" data-cell>
+        <p><strong>Ligue agora!</strong></p>
+        <p>{% include tel-link.html phone='+551532353848' label='(15) 3235.3848 *' class='call-to-action-link' tip='Toque para fazer uma chamada.' %}</p>
+      </div>
+
+      <div data-cell>
+        <p>{{ site.description }}</p>
+      </div>
+
+    </div>
+
+    {% include share/widget.html position='Footer' %}
+
+  </div>
+
+</footer>

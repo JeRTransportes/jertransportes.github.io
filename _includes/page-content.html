@@ -1,0 +1,5 @@
+<section class="page-content {{ include.class }}">
+	{% if include.inner-class %}<div class="{{ include.inner-class }}">{% endif %}
+	{% include {{ include.content-file }} %}
+	{% if include.inner-class %}</div>{% endif %}
+</section>

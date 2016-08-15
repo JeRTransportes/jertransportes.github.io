@@ -1,0 +1,4 @@
+<a href="tel:{{ include.phone }}"{% if include.class %} class="{{ include.class }}"{% endif %} onclick="ga('send', 'event', 'Chamada', '{{ include.label }} [{{ include.phone }}]', location.pathname + ' @ ' + '{{ include.class }}');">{{ include.label }}</a>
+{% if include.tip %}
+<span class="teltip"><small>* {{ include.tip }}</small></span>
+{% endif %}

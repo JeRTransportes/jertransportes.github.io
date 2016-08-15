@@ -1,0 +1,47 @@
+
+.section-excerpt
+
+	background-color: $vermelho-medio
+	color: $background-color
+	padding: $spacing-unit * 2 $spacing-unit / 2
+
+	.excerpt-figure
+		max-width: 400px
+		height: 400px
+		flex-basis: 400px
+		overflow: hidden
+		border-radius: 5000px
+
+		+media-query($on-laptop)
+			max-width: 300px
+			height: 300px
+			flex-basis: 300px
+
+		+media-greater($on-desktop)
+			max-width: 480px
+			height: 480px
+			flex-basis: 480px
+
+	p
+		max-width: 300px
+		margin: auto
+
+		+media-query($on-laptop)
+			max-width: 260px
+
+		+media-query($on-palm)
+			max-width: none
+
+		+media-greater($on-desktop)
+			max-width: 480px
+
+
+
+
+	+media-greater($on-palm)
+
+		div:nth-child(odd) 
+
+			.excerpt-figure-container
+
+				order: 1

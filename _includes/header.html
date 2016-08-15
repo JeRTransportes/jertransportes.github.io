@@ -1,0 +1,33 @@
+<header class="site-header">
+
+  <div class="header-wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ "/img/Logo-JR.png" | prepend: site.baseurl }}" alt="Logo J&amp;R Logística"></a>
+
+    <nav class="site-nav">
+      <a href="{{ '/' | prepend: site.baseurl }}" class="header-link">
+      {% include icon/home.svg %}
+      EMPRESA</a>
+      <a href="#contato" class="header-link">
+      {% include icon/mail.svg %}
+      FALE CONOSCO</a>
+    </nav>
+
+  </div>
+
+</header>
+
+{% if page.cover.desktop %}
+<style>
+	.site-header {
+		background-image:url('{{ page.cover.mobile }}');
+    background-size: cover;
+    height: 560px;
+	}
+	@media screen and (min-width: 801px) {
+		.site-header {
+			background-image: url('{{ page.cover.desktop }}');
+		}
+	}
+</style>
+{% endif %}
