@@ -1,60 +1,3 @@
-/**
- * Site header
- */
-.site-header 
-    display: table
-    width: 100%
-    height: 400px
-    overflow: hidden
-    background:
-        color: $background-color
-        size: cover
-        repeat: no-repeat
-        position: center
-        image: radial-gradient(circle at 50% 100%, $vermelho-claro, darken($vermelho-medio, 20%))
-
-
-    // Positioning context for the mobile navigation icon
-    position: relative
-
-    .header-wrapper
-        display: table-cell
-        vertical-align: middle
-        max-width: 0
-
-.site-title 
-    position: relative
-    z-index: 999
-    img
-        display: block
-        margin: auto
-
-.site-nav
-    position: absolute
-    top: 0
-    right: 0
-    margin: -8em -6em
-    padding: 8em 8em 1em
-    font-size: .80em
-    background-color: $grey-color-dark
-    border-radius: 100%
-
-    .header-link 
-        display: inline-block
-        color: $text-color
-        line-height: $base-line-height
-        padding: $spacing-unit / 2
-        color: $grey-color-light
-
-        svg
-            display: inline-block
-            vertical-align: text-bottom
-            width: 2em
-            height: 1.4em
-            color: inherit
-
-            *
-                fill: currentcolor
 
 .segment-select
 
@@ -112,39 +55,6 @@
             display: block
 
 
-/**
- * Site footer
- */
-.site-footer 
-    padding: $spacing-unit 0
-    background-color: $vermelho-escuro
-    color: #fff
-
-    .call-to-action-link
-        box-shadow: none
-
-
-.footer-heading 
-    font-size: 18px
-    text-align: center
-    margin-bottom: $spacing-unit / 2
-
-.footer-contact
-    +media-query($on-palm)
-        text-align: center
-
-.contact-list, .social-media-list 
-    flex: 1 1 auto
-    list-style: none
-    margin-left: 0
-
-
-.footer-col-wrapper 
-    font-size: 15px
-    color: $grey-color
-
-    a
-        color: #FFF
 
 .call-to-action
     text-align: center
@@ -175,8 +85,21 @@
 
     > li 
         margin-bottom: $spacing-unit
-    
 
+.docs
+    .docs-link
+        text-align: center
+        display: inline-block
+        width: 200px
+        flex: 1 0 auto
+
+        a
+            display: block
+        
+        img
+            display: block
+            margin: $spacing-unit / 2 auto
+            width: 120px
 
 .post-meta 
     font-size: $small-font-size
@@ -194,13 +117,16 @@
  * Posts
  */
 .post-header 
-    margin-bottom: $spacing-unit
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
+    text-align: center
 
 
 .post-title 
     font-size: 42px
     letter-spacing: -1px
     line-height: 1
+    color: $vermelho-claro
 
     @include media-query($on-laptop) 
         font-size: 36px
@@ -208,7 +134,8 @@
 
 
 .post-content 
-    margin-bottom: $spacing-unit
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
 
     h2 
         font-size: 32px
@@ -305,3 +232,5 @@
     background:
         color: $grey-color-light
         image: url('../img/concrete_seamless.png')
+
+

@@ -11,11 +11,11 @@ locais:
   - nome: Matriz
     endereco: Av. Victor Andrews, 3210 - Éden, Sorocaba
     telefone: (15) 3235.3848
-    maps: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14643.566472004264!2d-47.432675!3d-23.428282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbfdb969e0a66e9e!2zSiZSIFRSQU5TUE9SVEVTLCBMT0fDjVNUSUNBIEUgRElTVFJJQlVJw4fDg08!5e0!3m2!1spt-BR!2sus!4v1471274887946
+    src: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14643.566472004264!2d-47.432675!3d-23.428282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbfdb969e0a66e9e!2zSiZSIFRSQU5TUE9SVEVTLCBMT0fDjVNUSUNBIEUgRElTVFJJQlVJw4fDg08!5e0!3m2!1spt-BR!2sus!4v1471274887946
   - nome: Filial
     endereco: Av. Luiz Rink, 504 - Mutinga, Osasco
     telefone: (11) 2692.8519
-    maps: https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d923.3455083259574!2d-46.77383916207676!3d-23.51551516748032!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefee38f056343%3A0xe8eec771d636658f!2sAv.+Lu%C3%ADs+Rink%2C+504+-+Mutinga%2C+Osasco+-+SP!5e1!3m2!1spt-BR!2sbr!4v1471275178194
+    src: https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d923.3455083259574!2d-46.77383916207676!3d-23.51551516748032!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefee38f056343%3A0xe8eec771d636658f!2sAv.+Lu%C3%ADs+Rink%2C+504+-+Mutinga%2C+Osasco+-+SP!5e1!3m2!1spt-BR!2sbr!4v1471275178194
 
 # Build settings
 markdown: kramdown
