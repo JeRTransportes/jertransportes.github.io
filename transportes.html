@@ -51,7 +51,28 @@ docs:
 
 <div class="bg-caminhao"><div class="bg-caminhao-inner"></div></div>
 <script>
-  //
+  (function(){
+    var
+      offset = 300,
+      outer = document.querySelector('.bg-caminhao'),
+      inner = outer.querySelector('.bg-caminhao-inner'),
+      vh = window.innerHeight
+    ;
+    inner.style.right = offset*(-1) +'px';
+    inner.style.transform = 'translate('+ offset*(-1) +'px)'
+    window.addEventListener('scroll', scrollHandler);
+    function scrollHandler() {
+      var
+        bounding = inner.getBoundingClientRect(),
+        t = bounding.top,
+        h = bounding.height
+      ;
+      if ( t<=vh && t>=0 ) {
+        var newOffset = Math.ceil( t / vh * offset );
+        inner.style.transform = 'translate('+ newOffset*(-1) +'px)';
+      }
+    }
+  })();
 </script>
 <section class="page-content section-locais concrete-wall">
   <div class="wrapper">
