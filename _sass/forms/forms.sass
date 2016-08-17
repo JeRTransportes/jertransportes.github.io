@@ -1,0 +1,49 @@
+
+%form-basis
+	padding: .5em .7em
+	font-size: $base-font-size
+	border: none
+	border-radius: 4px
+
+$input-shadow: inset 0 1px 1px 0 rgba($grey-color-dark, .5)
+$button-shadow: 0 1px 3px 0 rgba($grey-color-dark, .5)
+
+fieldset
+	border: none
+	padding: $spacing-unit 0
+
+label
+	display: inline-block
+	width: 10em
+	font-size: .85em
+	text-transform: uppercase
+	line-height: 1
+
+input
+	&[type='text'], 
+	&[type='password'], 
+	&[type='search'], 
+	&[type='tel'], 
+	&[type='url'], 
+	&[type='email'], 
+	&[type='datetime'], 
+	&[type='date'], 
+	&[type='time'], 
+	&[type='month'], 
+	&[type='week'], 
+	&[type='datetime-local'], 
+	&[type='number'], 
+	&[type='range']
+		@extend %form-basis
+		box-shadow: $input-shadow
+		width: 100%
+
+textarea
+	@extend %form-basis
+	box-shadow: $input-shadow
+	width: 100%
+
+button
+	@extend %form-basis
+	box-shadow: $button-shadow
+	text-transform: uppercase

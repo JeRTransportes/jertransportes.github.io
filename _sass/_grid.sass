@@ -10,7 +10,7 @@
     +media-query($on-palm)
         flex-direction: column
         > *
-            flex-basis: auto // IE bug #1
+            flex-basis: auto !important // IE bug #1
             max-width: 100% // IE bug #2
 
 
@@ -44,8 +44,6 @@
         align-items: stretch
 
     +variant(spacing)
-        > :not(:first-child)
-            margin-left: $spacing-unit / 2
         > :not(:last-child)
             margin-right: $spacing-unit / 2
         +media-query($on-palm)
@@ -65,17 +63,18 @@
             flex: 0 1 auto
 
         +variant(1of2)
-            flex-basis: 50%
+            flex-basis: 40%
         +variant(1of3)
-            flex-basis: 33.333%
+            flex-basis: 30%
         +variant(1of4)
-            flex-basis: 25%
+            flex-basis: 22%
         +variant(2of3)
-            flex-basis: 66.666%
+            flex-basis: 60%
 
         +media-query($on-palm)
             margin-left: 0 !important
             margin-right: 0 !important
+
             +variant(nospace)
                 margin-bottom: 0
             +variant(fill)

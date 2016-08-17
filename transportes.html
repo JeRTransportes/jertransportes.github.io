@@ -49,5 +49,20 @@ docs:
   content-file = 'forms/coleta.html'
 %}
 
+<div class="bg-caminhao"><div class="bg-caminhao-inner"></div></div>
+<script>
+  //
+</script>
+<section class="page-content section-locais concrete-wall">
+  <div class="wrapper">
+    <header class="post-header">
+      <h2 class="post-title">Localização</h2>
+    </header>
+    {% include locais.html %}
+    {% include share/widget.html position = 'section-locais' %}
+  </div>
+</section>
 
-<!-- {% include locais.html local="Matriz" %} -->
+{% assign arrlocal = site.locais | where: 'nome', 'Matriz' %}
+{% assign mapsrc = arrlocal[0].src %}
+{% include embed-google-maps.html src = mapsrc %}

@@ -1,3 +1,87 @@
 <header class="post-header"><h2 class="post-title">Coleta</h2></header>
 
-<form action=""></form>
+<form action="">
+	<fieldset>
+		<div data-grid="spacing">
+			<p data-cell="1of2">
+				<label for="remetente">Remetente:</label> 
+				<input type="text" name="remetente">
+			</p>
+			<p data-cell="1of2">
+				<label for="remcnpj">CNPJ:</label> 
+				<input type="text" name="remcnpj">
+			</p>
+		</div>
+
+		<div data-grid="spacing">
+			<p data-cell="2of3">
+				<label for="remendereco">Endereço:</label> 
+				<input type="text" name="remendereco">
+			</p>
+			<p data-cell="1of3">
+				<label for="remmunicipio">Município:</label> 
+				<input type="text" name="remmunicipio">
+			</p>
+		</div>
+	</fieldset>
+	<hr>
+	<fieldset>
+		<div data-grid="spacing">
+			<p data-cell="1of2">
+				<label for="destinatario">Destinatário:</label> 
+				<input type="text" name="destinatario">
+			</p>
+			<p data-cell="1of2">
+				<label for="destcnpj">CNPJ:</label> 
+				<input type="text" name="destcnpj">
+			</p>
+		</div>
+		<div data-grid="spacing">
+			<p data-cell="2of3">
+				<label for="destendereco">Endereço:</label> 
+				<input type="text" name="destendereco">
+			</p>
+			<p data-cell="1of3">
+				<label for="destmunicipio">Município:</label> 
+				<input type="text" name="destmunicipio">
+			</p>
+		</div>
+	</fieldset>
+	<hr>
+	<fieldset>
+		<div data-grid="spacing">
+			<p data-cell="1of2">
+				<label for="natureza">Natureza:</label> 
+				<input type="text" name="natureza">
+			</p>
+			<p data-cell="1of2">
+				<label for="notasfiscais">Notas Fiscais:</label> 
+				<input type="text" name="notasfiscais">
+			</p>
+		</div>
+		<div data-grid="spacing">
+			<p data-cell="1of3">
+				<label for="valores">Valores:</label> 
+				<input type="text" name="valores">
+			</p>
+			<p data-cell="1of3">
+				<label for="kg">KG:</label> 
+				<input type="text" name="kg">
+			</p>
+			<p data-cell="1of3">
+				<label for="lt">LT:</label> 
+				<input type="text" name="lt">
+			</p>
+		</div>
+	<p>
+		<label for="obs">Observação:</label> 
+		<textarea name="obs" rows="4"></textarea>
+	</p>
+	</fieldset>
+
+	<p>
+		<button type="submit">ENVIAR INFORMAÇÕES</button>
+	</p>
+	<label hidden class="hidden">Se estiver vendo isso, deixe este campo em branco: <input type="honey" name="coleta-honey"></label>
+
+</form>
