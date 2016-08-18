@@ -63,13 +63,13 @@
             flex: 0 1 auto
 
         +variant(1of2)
-            flex-basis: 40%
+            flex-basis: 50%
         +variant(1of3)
-            flex-basis: 30%
+            flex-basis: 33.333%
         +variant(1of4)
-            flex-basis: 22%
+            flex-basis: 25%
         +variant(2of3)
-            flex-basis: 60%
+            flex-basis: 66.666%
 
         +media-query($on-palm)
             margin-left: 0 !important
@@ -87,8 +87,8 @@
             display: inline-block
 
             +media-greater($on-palm)
-                flex-basis: 40%
-                width: 40%
+                flex-basis: 50%
+                width: 50%
 
                 &:nth-child(odd)
                     margin-left: 0 !important

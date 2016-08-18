@@ -1,7 +1,36 @@
+<header class="post-header"><h2 class="post-title">Contato</h2></header>
 
+<form action="" method="post">
 
-"nome"
+	<fieldset>
+		<div data-grid="spacing">
+			<div data-cell="1of3">
+				<label for="nome">Nome</label>
+				<input type="text" name="nome" required placeholder="Seu Nome">
+			</div>
+			<div data-cell="1of3">
+				<label for="email">E-mail</label>
+				<input type="email" name="email" required placeholder="seunome@dominio.com">​
+			</div>
+			<div data-cell="1of3">
+				<label for="telefone">Telefone</label>
+				<input type="tel" name="telefone" required placeholder="(00)9999-9999">
+			</div>
+		</div>
+	</fieldset>
 
-"email"
+	<p>
+		<label for="mensagem">Mensagem</label>
+		<textarea name="mensagem" placeholder="Escreva sua mensagem" rows="7"></textarea>
+	</p>
 
-"telefone"
+	<footer data-grid="center justify">
+		<p data-cell>
+			<a href="#&times;">Fechar</a>
+		</p>
+		<p data-cell="shrink">
+			<button>Enviar</button>
+		</p>
+	</footer>
+
+</form>
