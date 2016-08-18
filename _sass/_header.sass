@@ -10,7 +10,6 @@
         position: center
         image: radial-gradient(circle at 50% 100%, $vermelho-claro, darken($vermelho-medio, 20%))
 
-
     position: relative
 
     .header-wrapper
@@ -21,10 +20,29 @@
 .site-title 
     position: relative
     z-index: 999
-    display: block
+    display: inline-block
     img
-        display: block
-        margin: auto
+        max-width: 90%
+    .logo-title
+        font-family: 'Ocean Sans Std Book Extended'
+        text-transform: capitalize
+        transform: translate(0px)
+        transition: .5s ease-in-out
+        position: absolute
+        top: 37%
+        left: 36%
+
+
+    +media-query($on-laptop)
+        img
+            width: 360px
+        
+        .logo-title
+            font-size: 1.5em
+
+    +media-query(330px)
+        .logo-title
+            font-size: 1em
 
 .site-nav
     position: absolute

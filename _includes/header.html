@@ -2,7 +2,14 @@
 
   <div class="header-wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ "/img/Logo-JR.png" | prepend: site.baseurl }}" alt="Logo J&amp;R Logística"></a>
+    <div class="wrapper">
+      <div class="site-title">
+        <a href="{{ site.baseurl }}/"><img src="{{ "/img/Logo-JR.png" | prepend: site.baseurl }}" alt="Logo J&amp;R Logística"></a>
+        {% if page.logo-title %}
+          <h1 class="logo-title">{{ page.logo-title }}</h1>
+        {% endif %}
+      </div>
+    </div>
 
     <nav class="site-nav">
       <a href="{{ '/' | prepend: site.baseurl }}" class="header-link">
@@ -22,7 +29,7 @@
 	.site-header {
 		background-image:url('{{ page.cover.mobile }}');
     background-size: cover;
-    height: 560px;
+    height: 640px;
 	}
 	@media screen and (min-width: 801px) {
 		.site-header {
