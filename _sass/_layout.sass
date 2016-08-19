@@ -1,4 +1,46 @@
 
+.page-content 
+    padding: $spacing-unit 0
+
+.post-header 
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
+    text-align: center
+
+.post-title 
+    font-size: 42px
+    letter-spacing: -1px
+    line-height: 1
+    color: $vermelho-claro
+
+    @include media-query($on-laptop) 
+        font-size: 36px
+
+.post-content 
+    padding-top: $spacing-unit
+    padding-bottom: $spacing-unit
+
+    h2 
+        font-size: 32px
+
+        @include media-query($on-laptop) 
+            font-size: 28px
+
+    h3 
+        font-size: 26px
+
+        @include media-query($on-laptop) 
+            font-size: 22px
+
+    h4 
+        font-size: 20px
+
+        @include media-query($on-laptop) 
+            font-size: 18px
+
+
+
+
 .segment-select
 
     .segment-label
@@ -57,181 +99,101 @@
 
 
 
-.call-to-action
-    text-align: center
-    margin: $spacing-unit / 2
-    flex-grow: 2
+.section-service
+    background-color: $vermelho-medio
+    color: $background-color
+
+    .post-title
+        color: #fff
+
+    .post-content
+
+
+.section-about
+    padding-left: $spacing-unit / 2
+    padding-right: $spacing-unit / 2
+
+    .post-title
+
+    .post-content
+        margin: auto
+        max-width: 1140px
+
+
+.section-hero
+
+    .hero-header
+        flex-basis: 60%
+
+        h2
+            font-size: 1.2em
+
+        +media-query($on-palm)
+            flex-basis: auto
+
+    .embed-container
+        margin: $spacing-unit auto
+
+    .call-to-action
+        width: 16em
+        text-align: center
+        margin: $spacing-unit / 2
+
+        strong
+            font-size: 1.6em
+
+        +media-query($on-palm)
+            display: flex
+            width: 100%
+            align-items: center
+            justify-content: space-around
+            flex-wrap: wrap
+            margin-bottom: $spacing-unit
+
+            > *
+                display: inline-block
 
     .teltip
-        display: block
-        text-align: center
+        width: 100%
 
 
+.section-excerpt
+    background-color: $vermelho-medio
+    color: $background-color
+    padding: $spacing-unit * 2 $spacing-unit / 2
 
+    .excerpt-figure
+        max-width: 400px
+        height: 400px
+        flex-basis: 400px
+        overflow: hidden
+        border-radius: 5000px
 
-/**
- * Page content
- */
-.page-content 
-    padding: $spacing-unit 0
+        +media-query($on-laptop)
+            max-width: 300px
+            height: 300px
+            flex-basis: 300px
 
+        +media-greater($on-desktop)
+            max-width: 480px
+            height: 480px
+            flex-basis: 480px
 
-.page-heading 
-    font-size: 20px
+    p
+        max-width: 300px
+        margin: auto
 
+        +media-query($on-laptop)
+            max-width: 260px
 
-.post-list 
-    margin-left: 0
-    list-style: none
+        +media-query($on-palm)
+            max-width: none
 
-    > li 
-        margin-bottom: $spacing-unit
+        +media-greater($on-desktop)
+            max-width: 480px
 
-.docs
-    .docs-link
-        text-align: center
-        display: inline-block
-        width: 200px
-        flex: 1 0 auto
-
-        a
-            display: block
-        
-        img
-            display: block
-            margin: $spacing-unit / 2 auto
-            width: 120px
-
-.post-meta 
-    font-size: $small-font-size
-    color: $grey-color
-
-
-.post-link 
-    display: block
-    font-size: 24px
-
-
-
-
-/**
- * Posts
- */
-.post-header 
-    padding-top: $spacing-unit
-    padding-bottom: $spacing-unit
-    text-align: center
-
-
-.post-title 
-    font-size: 42px
-    letter-spacing: -1px
-    line-height: 1
-    color: $vermelho-claro
-
-    @include media-query($on-laptop) 
-        font-size: 36px
-    
-
-
-.post-content 
-    padding-top: $spacing-unit
-    padding-bottom: $spacing-unit
-
-    h2 
-        font-size: 32px
-
-        @include media-query($on-laptop) 
-            font-size: 28px
-        
-    
-
-    h3 
-        font-size: 26px
-
-        @include media-query($on-laptop) 
-            font-size: 22px
-        
-    
-
-    h4 
-        font-size: 20px
-
-        @include media-query($on-laptop) 
-            font-size: 18px
-
-
-
-.share-widget
-    display: table
-    margin: auto
-
-    .widget-label, .widget-btn
-        line-height: 56px
-        text-align: center
-        margin: 0 $spacing-unit / 2
-
-    .widget-label
-        display: block
-        color: $grey-color
-    
-    .widget-btn
-        display: inline-block
-        width: 56px
-        height: 56px
-        border-radius: 10em
-        color: #fff
-
-    svg
-        width: 20px
-        height: 56px
-        vertical-align: sub
-
-    path
-        fill: currentcolor
-
-    .btn-fb
-        background-color: #3b5998
-    .btn-tw
-        background-color: #1da1f2
-    .btn-li
-        background-color: #0077b5
-    .btn-gp
-        background-color: #dd4b39
-    .btn-wa
-        background-color: #43d854
-
-
-    +media-query($on-palm)
-        font-size: .75em
-        .widget-inner
-            flex-direction: row !important
-
-            .widget-btn
-                padding: 0
-                margin: 0 5px
-
-
-
-
-.call-to-action-link
-    display: inline-block
-    white-space: nowrap
-    padding: $spacing-unit / 2 $spacing-unit
-    background-color: $vermelho-claro
-    color: #FFF
-    border-radius: 5px
-    box-shadow: 0 3px 10px 0 $grey-color-dark
-    text-shadow: 0 -1px 1px $grey-color-dark
-
-    &:hover
-        color: #fff
-        text-decoration: none
-
-
-.concrete-wall
-    background:
-        color: $grey-color-light
-        image: url('../img/concrete_seamless.png')
-
+    +media-greater($on-palm)
+        div:nth-child(odd) 
+            .excerpt-figure-container
+                order: 1
 
