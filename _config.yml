@@ -21,4 +21,7 @@ locais:
 markdown: kramdown
 
 sass:
-    style: compressed
+  style: compressed
+
+gems:
+  - jekyll-coffeescript
