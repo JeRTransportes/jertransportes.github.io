@@ -1,4 +1,111 @@
 
+.nav-bar
+    background-color: $vermelho-claro
+    color: #fff
+    position: relative
+
+    &.fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 999
+        transform: translate(0px)
+
+        +media-query($on-palm)
+            a
+                padding: $spacing-unit / 2
+
+        +media-greater($on-palm)
+            img
+                animation: enter-left .6s ease-in-out forwards
+
+    .wrapper
+        width: 100%
+
+    .nav-toggle
+        display: none
+
+        a:hover
+            background-color: transparent
+
+    a
+        display: block
+        padding: $spacing-unit $spacing-unit / 2
+        color: inherit
+        text-align: center
+        text-decoration: none
+        text-transform: uppercase
+        transition: .5s ease-in-out
+
+        &:hover
+            background-color: $vermelho-escuro
+
+    +media-query($on-palm)
+
+        .nav-toggle
+            display: flex
+            transition: .3s ease-in-out
+
+        .nav-links
+            position: absolute
+            transition: opacity .3s ease-in-out
+            top: 100%
+            left: 0
+            background-color: $vermelho-medio
+            a
+                width: 100%
+            .nav-logo
+                display: none
+
+        &:not(:hover)
+            .nav-links
+                opacity: 0
+                a
+                    display: none
+
+        &:hover
+            .nav-links
+                opacity: 1
+                padding-bottom: $spacing-unit / 2
+                a
+                    display: block
+                    animation: happen .3s ease-in-out forwards
+
+                    @for $i from 1 through 10
+                        &:nth-of-type(#{$i})
+                            animation-duration: 150ms * $i
+
+        .nav-links.closed
+            opacity: 0
+            a
+                display: none
+
+@keyframes happen
+    0%
+        opacity: 0
+        transform: translateY($spacing-unit)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes enter-left
+    0%
+        opacity: 0
+        transform: translate($spacing-unit)
+    100%
+        opacity: 1
+        transform: translate(0)
+
+@keyframes enter-left
+    0%
+        opacity: 0
+        transform: translate(-$spacing-unit)
+    100%
+        opacity: 1
+        transform: translate(0)
+
+
 .page-content 
     padding: $spacing-unit 0
 
