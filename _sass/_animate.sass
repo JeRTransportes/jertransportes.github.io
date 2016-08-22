@@ -1,0 +1,38 @@
+
+@keyframes happen
+    0%
+        opacity: 0
+        transform: translateY($spacing-unit)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes enter-left
+    0%
+        opacity: 0
+        transform: translate(-$spacing-unit)
+    100%
+        opacity: 1
+        transform: translate(0)
+
+@keyframes enter-right
+    0%
+        opacity: 0
+        transform: translate($spacing-unit)
+    100%
+        opacity: 1
+        transform: translate(0)
+
++module(entrance)
+    animation-duration: .7s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+
+    +variant(hide)
+        opacity: 0
+    +variant(happen)
+        animation-name: happen
+    +variant(left)
+        animation-name: enter-left
+    +variant(right)
+        animation-name: enter-right

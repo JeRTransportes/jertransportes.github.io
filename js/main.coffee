@@ -40,10 +40,30 @@ if navbar
 		else
 			menu.classList.add    'closed'
 
-
-
 	window.addEventListener 'scroll', fixthebar
 	fixbar.addEventListener 'click', togglemenu
+
+
+animes = $('[data-entrance-style]')
+
+if animes.length
+	animes = _(animes)
+	vh = window.innerHeight
+
+	animes.forEach (section) ->
+		animestyle = section.getAttribute 'data-entrance-style'
+		section.setAttribute 'data-entrance', 'hide'
+
+	entranceHandler = () ->
+		for anime in animes
+			false if anime.getAttribute('data-entrance') is anime.getAttribute('data-entrance-style')
+			top = anime.getBoundingClientRect().top
+			if top <= vh * 0.75
+				anime.setAttribute 'data-entrance', anime.getAttribute 'data-entrance-style'
+
+
+
+	window.addEventListener 'scroll', entranceHandler
 
 
 container = $('.bg-caminhao')[0]
@@ -66,3 +86,4 @@ if container
 
 	styleOffset(offset)
 	window.addEventListener 'scroll', scrollHandler
+

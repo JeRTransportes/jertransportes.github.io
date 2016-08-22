@@ -38,14 +38,14 @@ docs:
 
 <section class="page-content section-about concrete-wall" id="empresa">
   
-  <header class="post-header">
+  <header class="post-header" data-entrance-style="happen">
     <h2 class="post-title">J&R Transportes - Logística e Distribuição</h2>
   </header>
   <div data-grid="center spacing" class="post-content">
-    <aside data-cell="1of3">
+    <aside data-cell="1of3" data-entrance-style="left">
       <img src="{{ '/img/fotos_empresa_jrtranportes.png' | prepend: site.baseurl }}" alt="">
     </aside>
-    <div data-cell="2of3">
+    <div data-cell="2of3" data-entrance-style="right">
       <p>Criada em 04 de Maio de 1993, a J&R Transportes possui um território de 30.000 m², e está localizada na Avenida Victor Andrew 3210, no Éden, zona industrial de Sorocaba.</p>
       <p>No início a empresa funcionava em um barracão com um pouco mais de 300 m² somente com 01 empilhadeira e 02 caminhões e um pequeno escritório. Com apoio de terceiros, alto investimento em tecnologia e equipamentos, sua visão de futuro foi fator determinante para o crescimento e desenvolvimento da empresa.</p>
       <p>Nossa principal forma de atuação é de capital aberto. Nossa missão principal é transportar materiais metalúrgicos, aromas, fragrâncias, cosméticos, embalagens, peças, produtos químicos, etc.</p>
@@ -61,12 +61,12 @@ docs:
 
 <section class="page-content section-service" id="servicos">
   <div class="wrapper">
-    <header class="post-header">
+    <header class="post-header" data-entrance-style="happen">
       <h2 class="post-title">Nossos serviços</h2>
     </header>
     <div class="post-content">
       <div data-grid="center">
-        <div data-cell="1of2">
+        <div data-cell="1of2" data-entrance-style="left">
           <p>Atuamos no estado de São Paulo e todo Brasil, principalmente nas regiões da Grande São Paulo e de Sorocaba. Trabalhamos com cargas fracionadas e também cargas fechadas. Nossos serviços são totalmente personalizados, havendo a possibilidade de atendimento de quaisquer tipos de carga e locais de entrega.</p>
           <p>Temos todos os tipos de veículos que seu negócio possa demandar. Desde carros leves e médios até veículos pesados, com um eficiente controle de frota, através de rastreamento 24 horas por satélite e um programa de manutenções preventivas que segue os princípios de sustentabilidade e respeito ao meio ambiente.</p>
         </div>
@@ -74,21 +74,23 @@ docs:
           <img src="{{ '/img/bg-estado-de-sao-paulo.png' | prepend: site.baseurl }}" alt="em todo estado de São Paulo">
         </div>
       </div>
-      <p>Nosso escritório administrativo possui um grande suporte tecnológico de computadores interligados em rede e internet, e câmeras monitorando os serviços durante 24 horas por dia, garantindo a segurança, qualidade, rapidez e bons serviços aos nossos clientes, que somam hoje mais de 150 clientes em Sorocaba e região.</p>
-      <p>Além da eficiência no transporte, atuamos na área de logística e movimentação há mais de 10 anos no mercado, para que o cliente não tenha custos com armazenamento em sua empresa e possa enfocar a aplicação de seus recursos na sua atividade fim, deixando com a Armazenagem e Logística J&R a responsabilidade de administrar seu estoque. Hoje administramos mais de 2.900 pallets com total eficiência, graças ao trabalho dinâmico de nossos funcionário capacitados.</p>
-      <p>Possuímos diversos galpões nas seguintes medidas, 1.900m², 450m², 600m² e 750m², e também disponibilizamos o armazenamento unitário, podendo deixar Pallets avulsos com no mínimo de 15 Pallets (Posições) em estoque com total controle e administração.</p>
+      <div data-entrance-style="happen">
+        <p>Nosso escritório administrativo possui um grande suporte tecnológico de computadores interligados em rede e internet, e câmeras monitorando os serviços durante 24 horas por dia, garantindo a segurança, qualidade, rapidez e bons serviços aos nossos clientes, que somam hoje mais de 150 clientes em Sorocaba e região.</p>
+        <p>Além da eficiência no transporte, atuamos na área de logística e movimentação há mais de 10 anos no mercado, para que o cliente não tenha custos com armazenamento em sua empresa e possa enfocar a aplicação de seus recursos na sua atividade fim, deixando com a Armazenagem e Logística J&R a responsabilidade de administrar seu estoque. Hoje administramos mais de 2.900 pallets com total eficiência, graças ao trabalho dinâmico de nossos funcionário capacitados.</p>
+        <p>Possuímos diversos galpões nas seguintes medidas, 1.900m², 450m², 600m² e 750m², e também disponibilizamos o armazenamento unitário, podendo deixar Pallets avulsos com no mínimo de 15 Pallets (Posições) em estoque com total controle e administração.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="page-content section-docs" id="documentos">
-  <div class="wrapper">
+  <div class="wrapper" data-entrance-style="right">
     {% include sections/docs.html %}
   </div>
 </section>
 
 <section class="page-content form-coleta" id="coleta">
-  <div class="wrapper">
+  <div class="wrapper" data-entrance-style="happen">
     {% include forms/coleta.html %}
   </div>
 </section>
@@ -97,11 +99,13 @@ docs:
 
 <section class="page-content section-locais concrete-wall" id="mapa">
   <div class="wrapper">
-    <header class="post-header">
+    <header class="post-header" data-entrance-style="happen">
       <h2 class="post-title">Localização</h2>
     </header>
     {% assign arrlocal = site.locais | where: 'nome', 'Matriz' %}
     {% assign mapsrc = arrlocal[0].src %}
-    {% include embed-google-maps.html src = mapsrc %}
+    <div data-entrance-style="right">
+      {% include embed-google-maps.html src = mapsrc %}
+    </div>
   </div>
 </section>
