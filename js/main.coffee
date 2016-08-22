@@ -22,6 +22,7 @@ if navbar
 	fixbar = navbar.cloneNode true
 	menu = fixbar.querySelector('.nav-links')
 	logo = $('.nav-bar .nav-toggle .nav-logo')[0].cloneNode true
+	navbarOffset = navbar.getBoundingClientRect().height
 
 	fixbar.classList.add('fixed')
 	menu.prependChild logo
@@ -35,16 +36,27 @@ if navbar
 		else if body.contains fixbar
 			body.removeChild(fixbar)
 
-	togglemenu = (e) ->
+	navigate = (e) ->
 		if menu.classList.contains 'closed'
 			menu.classList.remove 'closed'
 			navlinks.classList.remove 'closed'
 		else
-			menu.classList.add    'closed'
-			navlinks.classList.add    'closed'
+			menu.classList.add 'closed'
+			navlinks.classList.add 'closed'
+
+		if e.target.href
+			target = e.target.attributes.href.nodeValue.toString()
+			return if not target
+			# hide fixbar on hashchange
+			fixbar.style.opacity = 0 if target is '#topo' or location.hash is '#topo'
+			sectionTarget = $(target)[0]
+			scollTarget = sectionTarget.offsetTop - navbarOffset
+			scrollToY scollTarget, 500, 'easeInOutQuint', () -> 
+				fixbar.style.opacity = 1
 
 	window.addEventListener 'scroll', fixthebar
-	fixbar.addEventListener 'click', togglemenu
+	navbar.addEventListener 'click', navigate
+	fixbar.addEventListener 'click', navigate
 
 
 animes = $('[data-entrance-style]')
