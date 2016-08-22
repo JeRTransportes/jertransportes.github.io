@@ -6,8 +6,8 @@ permalink: /transportes/
 sections:
   - title: Início
     id: topo
-  - title: História
-    id: historia
+  - title: Empresa
+    id: empresa
   - title: Serviços
     id: servicos
   - title: Licenças
@@ -36,7 +36,7 @@ docs:
     file : /docs/transportes/Certificado-SOS-Cotec.pdf
 ---
 
-<section class="page-content section-about concrete-wall" id="historia">
+<section class="page-content section-about concrete-wall" id="empresa">
   
   <header class="post-header">
     <h2 class="post-title">J&R Transportes - Logística e Distribuição</h2>
@@ -95,13 +95,13 @@ docs:
 
 {% include sections/bg-caminhao.html %}
 
-<section class="section-locais concrete-wall" id="mapa">
+<section class="page-content section-locais concrete-wall" id="mapa">
   <div class="wrapper">
     <header class="post-header">
       <h2 class="post-title">Localização</h2>
     </header>
+    {% assign arrlocal = site.locais | where: 'nome', 'Matriz' %}
+    {% assign mapsrc = arrlocal[0].src %}
+    {% include embed-google-maps.html src = mapsrc %}
   </div>
-  {% assign arrlocal = site.locais | where: 'nome', 'Matriz' %}
-  {% assign mapsrc = arrlocal[0].src %}
-  {% include embed-google-maps.html src = mapsrc %}
 </section>

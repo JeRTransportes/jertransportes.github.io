@@ -55,7 +55,7 @@
       <div data-cell="shrink" class="nav-toggle-btn"><a href="#menu">MENU</a></div>
     </div>
 
-    <div class="wrapper nav-links" data-grid="center wrap justify">
+    <div class="wrapper nav-links" data-grid="center nowrap justify">
       {% for section in page.sections %}
         <a href="{{ section.id | prepend: '#' }}">{{ section.title }}</a>
       {% endfor %}
