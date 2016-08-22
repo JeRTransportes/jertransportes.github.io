@@ -16,6 +16,7 @@ Element.prototype.prependChild = (child) ->
 
 body = $('body')[0]
 navbar = $('.nav-bar')[0]
+navlinks = navbar.querySelector('.nav-links')
 
 if navbar
 	fixbar = navbar.cloneNode true
@@ -37,8 +38,10 @@ if navbar
 	togglemenu = (e) ->
 		if menu.classList.contains 'closed'
 			menu.classList.remove 'closed'
+			navlinks.classList.remove 'closed'
 		else
 			menu.classList.add    'closed'
+			navlinks.classList.add    'closed'
 
 	window.addEventListener 'scroll', fixthebar
 	fixbar.addEventListener 'click', togglemenu
@@ -81,9 +84,9 @@ if container
 			styleOffset Math.ceil t / vh * offset
 
 	styleOffset = (n) ->
-		inner.style.right = n * (-1) + 'px'
 		inner.style.transform = 'translate(' + n * (-1) + 'px)'
 
 	styleOffset(offset)
+	inner.style.right = offset * (-1) + 'px'
 	window.addEventListener 'scroll', scrollHandler
 
