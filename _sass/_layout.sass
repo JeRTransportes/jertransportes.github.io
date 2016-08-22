@@ -5,32 +5,6 @@
     position: relative
     z-index: 999
 
-    &.fixed
-        position: fixed
-        top: 0
-        left: 0
-        right: 0
-        transform: translate(0px)
-
-        +media-query($on-palm)
-            a
-                padding: $spacing-unit / 2
-
-        +media-greater($on-palm)
-            img
-                animation: enter-left .6s ease-in-out forwards
-
-    .wrapper
-        width: 100%
-
-    .nav-toggle
-        display: none
-
-        +media-greater($on-palm)
-
-            a:hover
-                background-color: transparent
-
     a
         display: block
         padding: $spacing-unit $spacing-unit / 2
@@ -43,18 +17,38 @@
         &:hover
             background-color: $vermelho-escuro
 
+    &.fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        transform: translate(0px)
+
+        +media-greater($on-palm)
+            img
+                animation: enter-left .6s ease-in-out forwards
+
+    .wrapper
+        width: 100%
+
+    .nav-toggle
+        display: none
+
     +media-query($on-palm)
 
         .nav-toggle
             display: flex
             transition: .3s ease-in-out
+            a
+                padding: $spacing-unit / 2
+                background-color: transparent
 
         .nav-links
             position: absolute
             transition: opacity .3s ease-in-out
             top: 100%
             left: 0
-            background-color: $vermelho-medio
+            background-color: $vermelho-claro
             a
                 width: 100%
             .nav-logo
