@@ -17,23 +17,48 @@ Element.prototype.prependChild = (child) ->
 body = $('body')[0]
 navbar = $('.nav-bar')[0]
 navlinks = navbar.querySelector('.nav-links')
+initialTitle = document.title
 
 if navbar
 	fixbar = navbar.cloneNode true
 	menu = fixbar.querySelector('.nav-links')
 	logo = $('.nav-bar .nav-toggle .nav-logo')[0].cloneNode true
+	sections = _( menu.querySelectorAll('a[href^="#"]') ).map (link) ->
+		return $(link.attributes.href.nodeValue.toString())[0]
+
 
 	fixbar.classList.add('fixed')
 	menu.prependChild logo
 	menu.classList.add 'closed'
 
-	fixthebar = (e) ->
+	onPageScroll = (e) ->
 		top = navbar.getBoundingClientRect().top
 
-		if top < 0
+		if top <= 0
 			body.appendChild(fixbar) if not (body.contains fixbar)
 		else if body.contains fixbar
 			body.removeChild(fixbar)
+
+		sectionOnPage = undefined
+
+		for section in sections
+			vl = section.getBoundingClientRect().top - window.innerHeight / 2
+			break if vl > 0
+			sectionOnPage = section
+			if section.hasAttribute('data-title')
+				newTitle = section.getAttribute('data-title') if section.hasAttribute('data-title')
+				newId = section.id
+
+		if newTitle
+			document.title = initialTitle + ' - ' + newTitle
+		else
+			document.title = initialTitle
+
+		_(menu.querySelectorAll 'a').forEach (a) ->
+			if a.attributes.href.nodeValue.toString() is '#' + newId
+				a.classList.add 'selected'
+			else
+				a.classList.remove 'selected'
 
 	navigate = (e) ->
 		if menu.classList.contains 'closed'
@@ -50,11 +75,11 @@ if navbar
 			return if not target
 			sectionTarget = $(target)[0]
 			if sectionTarget
-				scollTarget = sectionTarget.offsetTop - fixbarOffset
-				scrollToY scollTarget, 500, 'easeInOutQuint', () -> 
+				scrollTarget = sectionTarget.offsetTop - fixbarOffset
+				scrollToY scrollTarget, 500, 'easeInOutQuint', () -> 
 					false
 
-	window.addEventListener 'scroll', fixthebar
+	window.addEventListener 'scroll', onPageScroll
 	navbar.addEventListener 'click', navigate
 	fixbar.addEventListener 'click', navigate
 
