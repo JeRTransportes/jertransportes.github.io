@@ -17,6 +17,7 @@ body
     -o-font-feature-settings: "kern" 1
     font-feature-settings: "kern" 1
     font-kerning: normal
+    text-rendering: optimizeLegibility
     box-sizing: border-box
     overflow-x: hidden // Firefox :(
 
@@ -259,6 +260,15 @@ hr
     &:target
         z-index: 9999
         opacity: 1
+
+    +media-query($on-palm)
+        justify-content: flex-start
+
+        fieldset
+            padding: 0
+
+        .post-header
+            padding-bottom: 0
 
 
 
