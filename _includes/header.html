@@ -27,10 +27,7 @@
 
     <div class="wrapper">
       <div class="site-title">
-        <a href="{{ site.baseurl }}/"><img src="{{ "/img/Logo-JR.png" | prepend: site.baseurl }}" alt="Logo J&R Transportes e Logística"></a>
-        {% if page.logo-title %}
-          <h1 class="logo-title">{{ page.logo-title }}</h1>
-        {% endif %}
+        <a href="{{ site.baseurl }}/"><img src="{% if page.logo-img %}{{ '/img/' | append: page.logo-img | prepend: site.baseurl }}{% else %}{{ '/img/Logo-JR.png' | prepend: site.baseurl }}{% endif %}" alt="Logo J&R Transportes e Logística"></a>
         {% if page.logo-subtitle %}
           <h1 class="logo-subtitle">{{ page.logo-subtitle }}</h1>
         {% endif %}
