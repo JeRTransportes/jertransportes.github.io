@@ -20,6 +20,10 @@ locais:
 # Build settings
 markdown: kramdown
 
+exclude:
+  - desktop.ini
+  - README.md
+
 sass:
   style: compressed
 
