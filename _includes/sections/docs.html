@@ -2,8 +2,13 @@
 <header class="post-header">
 	<h2 class="post-title">Licenças e certificações</h2>
 </header>
+
 <div data-grid="row wrap justify" class="docs">
+
 {% for doc in page.docs %}
-	<article data-cell class="docs-link"><a href="{{ doc.file }}" target="_blank"><img src="{{ '/img/pdf-icon.png' | prepend: site.baseurl }}" alt="Download:">{{ doc.title }}</a></article>
+
+	<article data-cell class="docs-link"><a href="{{ site.baseurl}}/docs{{ page.permalink }}{{ doc.file }}" target="_blank"><img src="{{ '/img/pdf-icon.png' | prepend: site.baseurl }}" alt="Download:">{{ doc.title }}</a></article>
+
 {% endfor %}
+
 </div>
