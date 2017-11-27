@@ -27,5 +27,5 @@ exclude:
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-coffeescript
