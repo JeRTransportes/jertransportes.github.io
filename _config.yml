@@ -26,6 +26,3 @@ exclude:
 
 sass:
   style: compressed
-
-plugins:
-  - jekyll-coffeescript
