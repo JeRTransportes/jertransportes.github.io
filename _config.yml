@@ -23,6 +23,9 @@ markdown: kramdown
 exclude:
   - desktop.ini
   - README.md
+  - node_modules
+  - package.json
+  - yarn.lock
 
 sass:
   style: compressed
