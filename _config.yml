@@ -26,6 +26,8 @@ exclude:
   - node_modules
   - package.json
   - yarn.lock
+  - Gemfile
+  - Gemfile.lock
 
 sass:
   style: compressed
